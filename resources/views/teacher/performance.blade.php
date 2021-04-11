@@ -137,23 +137,23 @@
                                         aria-labelledby="profile-tab2">
                                         <div class="row user" style="">
                                             <div class="col-sm-2 ml-auto">
-                                                <h4>Rounded Raised</h4>
-                                                <img src="{{asset('assets/img/faces/avatar.jpg')}}" alt="Raised Image"
+                                                <h4>Profile Info</h4>
+                                                <img src="{{asset('assets/img/faces/avatar.jpg')}}" alt="Profile Info"
                                                     class="img-raised rounded img-fluid">
                                             </div>
                                             <div class="col-sm-6 col-md-8">
                                                 <h4>
-                                                    User Name</h4>
-                                                <small><cite title="San Francisco, USA">email <i
+                                                    {{ucwords($user['first_name'])}}</h4>
+                                                <small><cite title="San Francisco, USA">{{$user['email']}} <i
                                                             class="glyphicon glyphicon-map-marker">
                                                         </i></cite></small>
                                                 <p>
-                                                    <i class="glyphicon glyphicon-envelope"></i>Phone No
+                                                    <i class="glyphicon glyphicon-envelope"></i>{{$user['phone']}}
                                                     <br />
-                                                    <i class="glyphicon glyphicon-globe"></i><a
-                                                        href="http://www.jquery2dotnet.com">Address</a>
+                                                    <i class="glyphicon glyphicon-globe"></i>{{$user['address']}}<a
+                                                        href="http://www.jquery2dotnet.com"></a>
                                                     <br />
-                                                    <i class="glyphicon glyphicon-gift"></i>Date of Birth</p>
+                                                    <i class="glyphicon glyphicon-gift"></i>{{$user['city']}}</p>
                                                 <!-- Split button -->
                                                 <div class="btn-group">
                                                     <button type="button" class="btn btn-primary">

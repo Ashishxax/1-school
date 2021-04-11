@@ -31,7 +31,7 @@
 									            <h5 class="title-header" style="color:purple;">Map Classes With Time Table</h5>
                                             </div>
                                             <div class="tab-content">
-		                                        <div class="tab-pane" id="details">
+		                                        <div class="tab-spane" id="details">
 		                            	            <div class="row gridDiv">
 		                                	            <div class="col-sm-12">
                                                             <div class="form-group label-floating">

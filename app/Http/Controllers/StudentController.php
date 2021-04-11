@@ -30,11 +30,10 @@ class StudentController extends Controller
     public function performance_report($id){
         //performance table
         $pagename = "Performance Report";
-        
         $performances = User::find($id)->performances()->get();
         $user = User::find($id);
-        // dd($performances1);
-        return view('teacher.performance',compact('pagename','performances'));
+        // dd($user);
+        return view('teacher.performance',compact('pagename','performances','user'));
 
     }
 }
