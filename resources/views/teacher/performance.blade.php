@@ -7,7 +7,7 @@
             @include('teacher.sidebar')
         </div>
 
-        <div class="main-panel">
+        <div class="main-panel abcd">
             <!-- Navbar -->
             @include('teacher.navbar')
             <!-- End Navbar -->
@@ -16,16 +16,16 @@
                 <div class="row">
                     <div class="col-sm-8 col-sm-offset-2">
                         <!--      Wizard container        -->
-                        <div class="wizard-container">
-                            <div class="card wizard-card" style="margin-left: 163px; margin-top:6px; height:75vh;"
+                        <div class="wizard-container-peformance">
+                            <div class="card wizard-card performance-card" style="margin-top:6px;"
                                 id="wizard">
 
-                                <div class="wizard-header">
+                                <div class="wizard-header-performance">
                                     <h3 class="wizard-title title-header" style="color:#9c27b0;">Ashish Bhardwaj
                                     </h3>
 
                                 </div>
-                                <div class="wizard-navigation" style="padding-bottom: 73px;margin-top: -23px;">
+                                <div class="wizard-navigation" style="padding-bottom: 30px;margin-top: -23px;">
                                     <ul class="nav nav-pills" id="myTab" role="tablist">
                                         <li class="nav-item activeA" style="width: 33.3333%;">
                                             <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home"
@@ -48,7 +48,7 @@
                                         <form action="{{ URL:: to('update-schedule') }}" method="POST"
                                             enctype="multipart/form-data">
                                             @csrf
-                                            <div class="row user" style="">
+                                            <div class="row user" style="padding:15px;">
 
                                                 <div class="col-sm-6">
                                                     <div class="input-group">
@@ -84,14 +84,14 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <button type="submit" class="btn btn-primary pull-right"
-                                                    style="margin-top: 50px;margin-left: 450px;">Submit
+                                                <button type="submit" class="btn btn-primary pull-right submit-btn"
+                                                    style="margin-top: 50px;">Submit
                                                 </button>
                                             </div>
                                         </form>
                                     </div>
                                     <div class="tab-pane fade show" id="profile" role="tabpanel"
-                                        aria-labelledby="profile-tab" style="margin-top: -50px; padding: 11px 7px 9px;">
+                                        aria-labelledby="profile-tab" style="; padding: 39px 33px 9px;">
                                         {{-- <div class="card-header card-header-primary">
                                             <h4 class="card-title mt-0"> Last 5 Performance</h4>
                                             <p class="card-category"> Create New Record from Performance Tab</p>
@@ -135,7 +135,7 @@
                                     </div>
                                     <div class="tab-pane fade show" id="profile2" role="tabpanel"
                                         aria-labelledby="profile-tab2">
-                                        <div class="row user" style="">
+                                        <div class="row user" style="padding:15px;">
                                             <div class="col-sm-2 ml-auto">
                                                 <h4>Profile Info</h4>
                                                 <img src="{{asset('assets/img/faces/avatar.jpg')}}" alt="Profile Info"

@@ -1,59 +1,83 @@
-        .activeA {
-            padding: 11px 7px 13px;
-            /* background-color: purple; */
-            box-shadow: 0 16px 26px -10px rgb(137 82 149 / 56%), 0 4px 25px 0px rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(244 67 54 / 20%) !important;
-            /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px!important; */
-        }
-        
-        .nav-pills .nav-link.active,
-        .nav-pills .show>.nav-link {
-            background-color: #9c27b0 !important;
-            border-color: #9c27b0 !important;
-            box-shadow: 0 2px 2px 0 rgb(156 39 176 / 14%), 0 3px 1px -2px rgb(156 39 176 / 20%), 0 1px 5px 0 rgb(156 39 176 / 12%) !important;
-            /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px!important; */
-        }
-        
-        .nav-pills>li>a {
-            font-size: 15px !important;
-            color: #130707!important;
-            font-family: fangsong!important;
-            font-weight: 1000!important;
-        }
-        
-        .profileRow {
-            margin-left: 68px;
-            margin-right: -2px;
-            margin-top: 32px;
-            border-radius: 22px;
-            /* box-shadow: 0 2px 2px 0 rgb(156 39 176 / 14%), 0 3px 1px -2px rgb(156 39 176 / 20%), 0 1px 5px 0 rgb(156 39 176 / 12%) !important; */
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px!important;
-            display: inherit!important;
-            /* height: -85vh; */
-        }
-        
-        .lastperformance {
-            padding: 0.9375rem 80px !important;
-            margin-top: -75px;
-            margin-left: -27px;
-        }
-        
-        .glyphicon {
-            margin-bottom: 10px;
-            margin-right: 10px;
-        }
-        
-        small {
-            display: block;
-            line-height: 1.428571429;
-            color: #999;
-        }
-        
-        .user {
-            margin-left: 68px;
-            margin-right: -2px;
-            border-radius: 22px;
-            /* box-shadow: 0 2px 2px 0 rgb(156 39 176 / 14%), 0 3px 1px -2px rgb(156 39 176 / 20%), 0 1px 5px 0 rgb(156 39 176 / 12%); */
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-            margin-left: 18px !important;
-            width: 95%;
-        }
+.activeA {
+    padding: 11px 7px 13px;
+    /* background-color: purple; */
+    box-shadow: 0 16px 26px -10px rgb(137 82 149 / 56%),
+        0 4px 25px 0px rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(244 67 54 / 20%) !important;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px!important; */
+}
+
+.nav-pills .nav-link.active,
+tab-content .nav-pills .show > .nav-link {
+    background-color: #9c27b0 !important;
+    border-color: #9c27b0 !important;
+    box-shadow: 0 2px 2px 0 rgb(156 39 176 / 14%),
+        0 3px 1px -2px rgb(156 39 176 / 20%), 0 1px 5px 0 rgb(156 39 176 / 12%) !important;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px!important; */
+}
+.wizard-card .tab-content {
+    min-height: 340px;
+    padding: 25px 0px;
+}
+.wizard-card .tab-content-schedule {
+    min-height: 340px;
+    padding: 20px 15px;
+}
+.nav-pills > li > a {
+    font-size: 15px !important;
+    color: #130707 !important;
+    font-family: fangsong !important;
+    font-weight: 1000 !important;
+}
+.performance-card {
+    margin-left: 163px;
+}
+@media only screen and (max-width: 576px) {
+    .performance-card {
+        margin-left: 0px;
+    }
+}
+.submit-btn {
+    margin-left: 70% !important;
+}
+@media only screen and (max-width: 768px) {
+   .submit-btn {
+    margin-left: 50% !important;
+}
+}
+.profileRow {
+    margin-left: 68px;
+    margin-right: -2px;
+    margin-top: 32px;
+    border-radius: 22px;
+    /* box-shadow: 0 2px 2px 0 rgb(156 39 176 / 14%), 0 3px 1px -2px rgb(156 39 176 / 20%), 0 1px 5px 0 rgb(156 39 176 / 12%) !important; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+    display: inherit !important;
+    /* height: -85vh; */
+}
+
+.lastperformance {
+    padding: 0.9375rem 80px !important;
+    margin-top: -75px;
+    margin-left: -27px;
+}
+
+.glyphicon {
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+small {
+    display: block;
+    line-height: 1.428571429;
+    color: #999;
+}
+
+.user {
+    margin-left: 68px;
+    margin-right: -2px;
+    border-radius: 22px;
+    /* box-shadow: 0 2px 2px 0 rgb(156 39 176 / 14%), 0 3px 1px -2px rgb(156 39 176 / 20%), 0 1px 5px 0 rgb(156 39 176 / 12%); */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-left: 18px !important;
+    width: 95%;
+}
