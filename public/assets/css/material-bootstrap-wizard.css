@@ -145,6 +145,9 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 .wizard-container {
   padding-top: 100px;
   z-index: 3; }
+  .wizard-container-peformance {
+  padding-top: 75px;
+  z-index: 3; }
   .wizard-container .wizard-navigation {
     position: relative; }
 
@@ -353,6 +356,9 @@ h2.title {
   .wizard-card .wizard-header {
     text-align: center;
     padding: 25px 0 35px; }
+     .wizard-card .wizard-header-performance {
+    text-align: center;
+    padding: 0px 0 35px; }
     .wizard-card .wizard-header h5 {
       margin: 5px 0 0; }
   .wizard-card .nav-pills > li {
