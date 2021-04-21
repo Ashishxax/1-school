@@ -2,16 +2,24 @@
 
 use Illuminate\Support\Facades\Route;
 
+header('Content-Type: text/html; charset=utf-8');
+Route::get('/clear-cache', function () {
+    $exitCode = Artisan::call('cache:clear');
+    $exitCode = Artisan::call('config:clear');
+    $exitCode = Artisan::call('view:clear');
+    return "Cache, Config & View Cleared";
+    // $exitCode = Artisan::call('config:cache');
+});
 
-
-Route::get('/', function () {return view('welcome');});
+Route::get('/', function () {return view('teacher.welcome2');});
 Route::post('logout','Auth\LoginController@logout');
 
 
 Auth::routes();
 
 
-Route::middleware('auth')->group(function(){
+Route::post('/user-cred','Teacher\DashboardController@user_cred');
+Route::middleware('usersession')->group(function(){
     Route::get('/home', 'Teacher\DashboardController@index')->name('teacher.dashboard');
     Route::get('/daily-sheet', 'Teacher\DashboardController@daily_sheet')->name('teacher.daily_sheet');
     //Update-Daily-Sheet

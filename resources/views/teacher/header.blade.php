@@ -10,7 +10,7 @@
     1-School
   </title>
   <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-
+  <meta name="csrf-token" content="{{ csrf_token() }}" />
   <link href="{{asset('assets/css/material-bootstrap-wizard.css')}}" rel="stylesheet" />
   <link href="{{asset('assets/css/style.css')}}" rel="stylesheet" />
   <link href="{{asset('assets/css/school.css')}}" rel="stylesheet" />
