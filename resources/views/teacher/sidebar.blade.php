@@ -27,9 +27,10 @@
   </ul>
 </div>
 
-
-var button = document.querySelector(".nav-item");
+<script>
+  var button = document.querySelector(".nav-item");
 
 button.addEventListener("click", function(e) {
    this.classList.toggle("is-active"); 
 });
+</script>
