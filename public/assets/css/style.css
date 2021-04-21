@@ -67,3 +67,22 @@
         transform: rotate(360deg);
     }
 }
+
+.sidebar .sidebar-wrapper{
+    background-color: #8e24aa;
+}
+
+.sidebar .nav p{
+    color:white;
+}
+
+.sidebar{
+    background-color: #8e24aa !important;
+}
+
+
+
+.nav-item:hover #blank_work,
+.nav-item.is-active #blank_work {
+    background-color: green;
+}
