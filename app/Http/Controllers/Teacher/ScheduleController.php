@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Teacher;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Schedule;
+use App\Models\Performance;
 
 class ScheduleController extends Controller
 {
@@ -20,6 +21,10 @@ class ScheduleController extends Controller
         Schedule::mark_schedule($request);
         return redirect()->route('teacher.dashboard');
     }
-
-    
+    public function mark_performance(Request $request){
+        unset($request['_token']);
+        $student_data = json_encode($request->all());
+        Performance::performance_mark($student_data);
+        return redirect()->back()->with('performance_status', 'Performance has been updated to user');
+    }
 }

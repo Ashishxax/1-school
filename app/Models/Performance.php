@@ -14,4 +14,11 @@ class Performance extends Model
     {
         return $this->belongsTo(User::class);
     }
+    public static function performance_mark($student_data){
+        self::insert(array(
+            'user_id'    => auth()->user()->id,
+            'student_data' => $student_data,
+        ));
+        return true;
+    }
 }

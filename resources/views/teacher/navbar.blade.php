@@ -11,7 +11,7 @@
       <span class="navbar-toggler-icon icon-bar"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end">
-      <form class="navbar-form">
+      {{-- <form class="navbar-form">
         <div class="input-group no-border">
           <input type="text" value="" class="form-control" placeholder="Search...">
           <button type="submit" class="btn btn-white btn-round btn-just-icon">
@@ -19,7 +19,7 @@
             <div class="ripple-container"></div>
           </button>
         </div>
-      </form>
+      </form> --}}
       <ul class="navbar-nav">
         <li class="nav-item dropdown">
           <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true"
@@ -27,7 +27,8 @@
             <i class="material-icons">person</i>
             <p class="d-lg-none d-md-block">
               Account
-            </p>
+            </p><br>
+            <span style="margin-left: -10px;">{{auth()->user()->first_name}}</span>
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
             <a class="dropdown-item" href="">Profile</a>

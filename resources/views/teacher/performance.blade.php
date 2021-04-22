@@ -1,4 +1,13 @@
 @include('teacher.header')
+<?php    
+    if(Session::get('performance_status'))
+    { 
+        echo '<div class="loader"></div>';
+        echo "<script type='text/javascript'>
+        swal('Success', 'Performance has been updated to user', 'success');
+        </script>";
+    }
+?>
 
 <body class="">
     <div class="wrapper ">
@@ -17,8 +26,7 @@
                     <div class="col-sm-8 col-sm-offset-2">
                         <!--      Wizard container        -->
                         <div class="wizard-container-peformance">
-                            <div class="card wizard-card performance-card" style="margin-top:6px;"
-                                id="wizard">
+                            <div class="card wizard-card performance-card" style="margin-top:6px;" id="wizard">
 
                                 <div class="wizard-header-performance">
                                     <h3 class="wizard-title title-header" style="color:#9c27b0;">Ashish Bhardwaj
@@ -45,7 +53,7 @@
                                 <div class="tab-content" id="myTabContent">
                                     <div class="tab-pane fade show active" id="home" role="tabpanel"
                                         aria-labelledby="home-tab">
-                                        <form action="{{ URL:: to('update-schedule') }}" method="POST"
+                                        <form action="{{ URL:: to('mark-performance') }}" method="POST"
                                             enctype="multipart/form-data">
                                             @csrf
                                             <div class="row user" style="padding:15px;">
@@ -54,16 +62,18 @@
                                                     <div class="input-group">
                                                         <div class="form-group label-floating">
                                                             <label class="control-label">Test Name</label>
-                                                            <input name="name" type="text" class="form-control"
-                                                                placeholder="Mathematics">
+                                                            <input name="test_name" type="text"
+                                                                class="form-control schedule" placeholder="Mathematics"
+                                                                required>
                                                         </div>
                                                     </div>
 
                                                     <div class="input-group">
                                                         <div class="form-group label-floating">
                                                             <label class="control-label">Full Marks</label>
-                                                            <input name="full_marks" type="text" class="form-control"
-                                                                placeholder="100">
+                                                            <input name="full_marks" type="text"
+                                                                class="form-control schedule" placeholder="100"
+                                                                required>
                                                         </div>
                                                     </div>
 
@@ -73,14 +83,17 @@
                                                         <div class="form-group label-floating">
                                                             <label class="control-label">Obtained Marks</label>
                                                             <input name="obtained_marks" type="text"
-                                                                class="form-control" placeholder="86">
+                                                                class="form-control schedule" placeholder="86" required>
                                                         </div>
                                                     </div>
                                                     <div class="input-group">
                                                         <div class="form-group label-floating">
                                                             <label class="control-label">Type of Test</label>
-                                                            <input name="test_type" type="text" class="form-control"
-                                                                placeholder="written">
+                                                            <input name="test_type" type="text"
+                                                                class="form-control schedule" placeholder="written"
+                                                                required>
+                                                            <input type="hidden" value="{{date('Y-m-d')}}"
+                                                                name="date" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -114,14 +127,14 @@
                                                                 $stu_data =
                                                                 json_decode(@$performances[$i]->student_data,true);
                                                                 @endphp
-                                                                <td>{{$stu_data['test_name']}}</td>
-                                                                <td>{{$stu_data['obtained_marks']}}</td>
-                                                                <td>{{$stu_data['full_marks']}}</td>
-                                                                <td>{{$stu_data['test_type']}}</td>
+                                                                <td>{{@$stu_data['test_name']}}</td>
+                                                                <td>{{@$stu_data['obtained_marks']}}</td>
+                                                                <td>{{@$stu_data['full_marks']}}</td>
+                                                                <td>{{@$stu_data['test_type']}}</td>
                                                                 @if(!empty($performances[$i]->student_data))
                                                                 <td>{{date('d-M-Y', strtotime($stu_data['date']))}}</td>
                                                                 @else
-                                                                <td>{{ $stu_data['date'] }} </td>
+                                                                <td>{{ @$stu_data['date'] }} </td>
                                                                 @endif
                                                                 </tr>
                                                                 @endfor
@@ -156,7 +169,8 @@
                                                     <i class="glyphicon glyphicon-gift"></i>{{$user['city']}}</p>
                                                 <!-- Split button -->
                                                 <div class="btn-group">
-                                                    <button type="button" class="btn btn-primary">
+                                                    <button type="button" class="btn btn-primary"
+                                                        onclick=window.location="{{ url('students') }}">
                                                         Students</button>
                                                 </div>
                                             </div>

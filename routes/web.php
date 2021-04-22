@@ -29,6 +29,9 @@ Route::middleware('usersession')->group(function(){
     //Update Schedule
     Route::post('/update-schedule', 'Teacher\ScheduleController@update_schedule');
 
+    //Mark Performance
+    Route::post('/mark-performance', 'Teacher\ScheduleController@mark_performance');
+
     // Performance
     Route::get('/students','StudentController@students')->name('students');
     //Student Search Ajax

@@ -8,19 +8,19 @@
     </li>
     <li class="nav-item ">
       <a class="nav-link" id="" href="{{ route('teacher.daily_sheet') }}">
-        <i class="material-icons">language</i>
+        <i class="material-icons">description</i>
         <p>Daily Sheet</p>
       </a>
     </li>
     <li class="nav-item ">
       <a class="nav-link" id="" href="{{ route('teacher.today_schedule') }}">
-        <i class="material-icons">language</i>
-        <p>Today's Schedule</p>
+        <i class="material-icons">today</i>
+        <p>Today Schedule</p>
       </a>
     </li>
     <li class="nav-item ">
       <a class="nav-link" id="" href="{{ route('students') }}">
-        <i class="material-icons">language</i>
+        <i class="material-icons">people</i>
         <p>Students</p>
       </a>
     </li>
